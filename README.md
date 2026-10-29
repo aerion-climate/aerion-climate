@@ -1,5 +1,3 @@
-[README.md](https://github.com/user-attachments/files/34138950/README.md)
-
 # AERION CLIMATE — site vitrine
 
 Site vitrine statique, responsive, en français. Aucun framework ni abonnement à un CMS n'est nécessaire.
