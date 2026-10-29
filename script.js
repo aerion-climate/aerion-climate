@@ -1,20 +1,9 @@
-(() => {
- const toggle = document.querySelector(".menu-toggle");
- const nav = document.querySelector("#nav");
- if (toggle && nav) {
-   toggle.addEventListener("click", () => {
-     const open = nav.classList.toggle("open");
-     toggle.setAttribute("aria-expanded", String(open));
-     const label = toggle.querySelector(".menu-word");
-     if (label) label.textContent = open ? "Fermer" : "Menu";
-   });
-   nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-     nav.classList.remove("open");
-     toggle.setAttribute("aria-expanded", "false");
-     const label = toggle.querySelector(".menu-word");
-     if (label) label.textContent = "Menu";
-   }));
- }
- const year = document.querySelector("#year");
- if (year) year.textContent = new Date().getFullYear();
-})();
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(e.target),n=d.get('nom')||'',c=d.get('contact')||'',m=d.get('msg')||'';
+  var ok=document.getElementById('ok');
+  if(!n.trim()||!c.trim()||!m.trim()){ok.textContent='Merci de remplir les trois champs.';return;}
+  var body='Nom : '+n+'\nContact : '+c+'\n\n'+m;
+  location.href='mailto:contact@aerion-climate.fr?subject='+encodeURIComponent('Demande de devis – '+n)+'&body='+encodeURIComponent(body);
+  ok.textContent='Votre application e-mail s’ouvre pour envoyer la demande.';
+});
