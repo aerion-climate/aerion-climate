@@ -23,6 +23,8 @@ a{color:inherit}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--black);border-bottom:1px solid #16202b}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:64px}
 .mark{font:400 .8rem/1 var(--display);letter-spacing:.32em;text-decoration:none;color:#fff;white-space:nowrap}
+.mark{display:inline-flex;align-items:center;gap:.8rem}
+.mark img{height:28px;width:auto;display:block}
 .mark span{color:var(--sky)}
 nav{display:flex;gap:1.6rem;align-items:center;font-size:.95rem}
 nav a{text-decoration:none;color:#c9d5e1}
