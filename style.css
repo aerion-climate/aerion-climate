@@ -22,7 +22,7 @@ nav a:hover,nav a.on{color:var(--sky);border-color:var(--sky)}
 
 /* Accueil */
 .hero{position:relative;background:#000;color:#fff;padding:3.5rem 0 4rem;overflow:hidden}
-.hero::after{content:"";position:absolute;top:0;right:0;bottom:0;width:62%;background:url(hero.jpg) center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
+.hero::after{content:"";position:absolute;top:0;right:0;bottom:0;width:64%;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.85) 22%,rgba(0,0,0,0) 62%),url(hero.jpg) center/cover no-repeat}
 .hero .wrap{position:relative;z-index:2}
 .eyebrow{font:600 .8rem var(--head);letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin:0 0 .8rem}
 .eyebrow.light{color:#fff}
@@ -47,7 +47,7 @@ h2{font:700 clamp(1.6rem,3.2vw,2.1rem)/1.2 var(--head);margin:0 0 .9rem}
 .cards p{margin:0;color:var(--mute);font-size:.9rem}
 
 .why{position:relative;background:linear-gradient(120deg,#07111c,#0e2a45);color:#fff;overflow:hidden}
-.why::after{content:"";position:absolute;top:0;right:0;bottom:0;width:62%;background:url(montagnes.jpg) center/cover no-repeat;opacity:.75;-webkit-mask-image:linear-gradient(90deg,transparent,#000 45%);mask-image:linear-gradient(90deg,transparent,#000 45%)}
+.why::after{content:"";position:absolute;top:0;right:0;bottom:0;width:62%;background:linear-gradient(90deg,#0a1a2b 0%,rgba(10,26,43,0) 55%),url(montagnes.jpg) center/cover no-repeat;opacity:.8}
 .why .wrap{position:relative;z-index:2}
 .four{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
 .four li{display:flex;gap:.9rem;align-items:flex-start}
@@ -72,7 +72,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   .bar{min-height:80px}
   .pill{padding:.7rem 1.1rem;font-size:.9rem}
   .cards,.four{grid-template-columns:1fr}
-  .hero::after{width:100%;opacity:.4;-webkit-mask-image:none;mask-image:none}
-  .why::after{width:100%;opacity:.35;-webkit-mask-image:none;mask-image:none}
+  .hero::after{width:100%;opacity:.4;background:url(hero.jpg) center/cover no-repeat}
+  .why::after{width:100%;opacity:.35;background:url(montagnes.jpg) center/cover no-repeat}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
