@@ -103,3 +103,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .faq details[open] summary::after{content:"–"}
 .faq details p{margin:.8rem 0 0;color:var(--mute)}
 .faq details a{color:var(--blue);text-decoration:underline}
+
+/* Réalisations */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,340px));gap:1.5rem;margin-top:1.5rem}
+.gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gallery img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.gallery figcaption{padding:.9rem 1.1rem;color:var(--mute);font-size:.92rem}
