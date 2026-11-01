@@ -58,6 +58,9 @@ h2{font:700 clamp(1.6rem,3.2vw,2.1rem)/1.2 var(--head);margin:0 0 .9rem}
 .coords>a:not(.btn),.coords p{display:flex;align-items:center;gap:1rem;margin:0;font:500 1.15rem var(--body)}
 .coords .btn{margin-top:.6rem}
 
+.zone{display:flex;gap:.7rem;align-items:flex-start;margin:2.2rem 0 0;color:#c3d0dd;font-size:.95rem;max-width:46rem}
+.zone .i{color:var(--sky);margin-top:.15rem}
+
 /* Aperçu du blog */
 .blog-teaser{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .cards.teaser{margin:1.5rem 0 2rem}
