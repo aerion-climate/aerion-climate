@@ -91,3 +91,4 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   .why::after{width:100%;opacity:.35;background:url(montagnes.jpg) center/cover no-repeat}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.zone a{color:#fff;text-decoration:underline}
