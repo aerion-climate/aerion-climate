@@ -33,3 +33,14 @@ Le formulaire n'envoie pas les données à un serveur et ne stocke rien : il ouv
 
 ## Remarque SEO
 Le référencement n'est pas garanti. Les données structurées et métadonnées sont une base de départ. Créer/optimiser une fiche Google Business Profile, vérifier les informations d'entreprise et ajouter les mentions légales avant diffusion publique.
+
+## Blog
+- `blog.html` : liste des articles (le plus récent en premier).
+- `article-*.html` : un fichier par article. `blog.css` contient le style du blog.
+
+Pour ajouter un article :
+1. Dupliquer un fichier `article-*.html` existant et le renommer (ex. `article-mon-sujet.html`, sans accents ni espaces).
+2. Modifier le `<title>`, la `<meta name="description">`, la date, le `<h1>` et le contenu dans `<article class="post">`.
+3. Ajouter une carte en haut de la liste dans `blog.html` (copier un bloc `<a class="post-card">`).
+4. Optionnel : mettre à jour les 3 articles mis en avant sur `index.html` (section `#blog`).
+5. Ajouter l'adresse du nouvel article dans `sitemap.xml`.

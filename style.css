@@ -58,19 +58,31 @@ h2{font:700 clamp(1.6rem,3.2vw,2.1rem)/1.2 var(--head);margin:0 0 .9rem}
 .coords>a:not(.btn),.coords p{display:flex;align-items:center;gap:1rem;margin:0;font:500 1.15rem var(--body)}
 .coords .btn{margin-top:.6rem}
 
+/* Aperçu du blog */
+.blog-teaser{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cards.teaser{margin:1.5rem 0 2rem}
+.cards.teaser a{display:flex;flex-direction:column;gap:.5rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem 1.3rem}
+.cards.teaser a:hover{border-color:var(--blue)}
+.cards.teaser h3{margin:0}
+.cards.teaser .more{margin-top:auto;padding-top:.6rem;color:var(--blue);font:600 .92rem var(--head)}
+footer a:hover{color:#fff}
+
 footer{background:#000;color:#8fa0b1;padding:1.6rem 0;font-size:.9rem}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
 @media(max-width:960px){
   .split{grid-template-columns:1fr}
   .four{grid-template-columns:1fr 1fr}
-  nav{display:none}
+  .bar{flex-wrap:wrap;row-gap:0;padding-bottom:.4rem}
+  nav{order:3;width:100%;margin:0;gap:1.4rem;overflow-x:auto;white-space:nowrap;font-size:.9rem}
   .pill{margin-left:auto}
 }
 @media(max-width:640px){
   .logo-link img{height:60px}
   .bar{min-height:80px}
   .pill{padding:.7rem 1.1rem;font-size:.9rem}
+  nav{gap:1rem;font-size:.85rem;justify-content:space-between}
+  nav a:first-child{display:none}
   .cards,.four{grid-template-columns:1fr}
   .hero::after{width:100%;opacity:.4;background:url(hero.jpg) center/cover no-repeat}
   .why::after{width:100%;opacity:.35;background:url(montagnes.jpg) center/cover no-repeat}
