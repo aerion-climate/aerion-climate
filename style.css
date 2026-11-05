@@ -111,3 +111,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .gallery figcaption{padding:.55rem .75rem;color:var(--mute);font-size:.82rem;line-height:1.35}
 .coords small{display:block;font-size:.9rem;color:var(--mute);margin-top:.2rem}
 .zone+.zone{margin-top:.8rem}
+
+/* Formulaire de contact */
+.contact-split{align-items:start}
+.contact-split .coords{margin-top:2rem}
+.cform{display:grid;gap:1rem;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.8rem}
+.cform .row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.cform label{display:grid;gap:.4rem;font:600 .95rem var(--head);color:var(--ink)}
+.cform .lt i{color:var(--blue);font-style:normal}
+.cform input,.cform select,.cform textarea{font:400 1rem var(--body);color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem;width:100%;box-sizing:border-box}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+.cform textarea{resize:vertical}
+.cform .btn{justify-self:start;border:0;cursor:pointer}
+.cform .btn:disabled{opacity:.6;cursor:wait}
+.cform .legal{margin:0;font-size:.85rem;color:var(--mute)}
+.cform .legal a,.cform-msg a{color:var(--blue);text-decoration:underline}
+.cform-msg{margin:0;font-weight:500}
+.cform-msg.ok{color:#127a3a}
+.cform-msg.err{color:#b42318}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+@media(max-width:640px){.cform{padding:1.2rem}.cform .row2{grid-template-columns:1fr}}

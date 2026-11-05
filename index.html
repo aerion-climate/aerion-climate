@@ -157,7 +157,7 @@
 </script>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css?v=20261105b">
+<link rel="stylesheet" href="style.css?v=20261105c">
 </head>
 <body>
 
@@ -283,22 +283,63 @@
   </section>
 
   <section class="contact" id="contact">
-    <div class="wrap split">
+    <div class="wrap split contact-split">
       <div>
         <p class="eyebrow">Contact</p>
         <h2>Besoin d’un renseignement ou d’un devis ?</h2>
         <span class="rule"></span>
-        <p class="muted">Je suis à votre disposition pour toute demande d’information ou pour planifier l’installation ou la mise en service de votre climatisation.</p>
+        <p class="muted">Décrivez votre projet en quelques lignes : je vous rappelle rapidement pour en parler et, si besoin, passer voir votre logement.</p>
+        <div class="coords">
+          <a href="tel:+33665362946"><svg class="i big"><use href="#i-phone"/></svg>06 65 36 29 46</a>
+          <a href="mailto:aerion.climate1@gmail.com"><svg class="i big"><use href="#i-mail"/></svg>aerion.climate1@gmail.com</a>
+          <p><svg class="i big"><use href="#i-pin"/></svg><span>20 Rue Bargoin, 03200 Vichy<br><small>Intervention dans toute l’Auvergne et ses environs</small></span></p>
+          <a href="https://g.page/r/Cebr_j0eTWvHEBM" target="_blank" rel="noopener"><svg class="i big"><use href="#i-star"/></svg>Voir mes avis Google</a>
+        </div>
       </div>
-      <div class="coords">
-        <a href="tel:+33665362946"><svg class="i big"><use href="#i-phone"/></svg>06 65 36 29 46</a>
-        <a href="mailto:aerion.climate1@gmail.com"><svg class="i big"><use href="#i-mail"/></svg>aerion.climate1@gmail.com</a>
-        <p><svg class="i big"><use href="#i-pin"/></svg><span>20 Rue Bargoin, 03200 Vichy<br><small>Intervention dans toute l’Auvergne et ses environs</small></span></p>
-        <a href="https://g.page/r/Cebr_j0eTWvHEBM" target="_blank" rel="noopener"><svg class="i big"><use href="#i-star"/></svg>Voir mes avis Google</a>
-        <a class="btn" href="mailto:aerion.climate1@gmail.com?subject=Demande%20de%20devis"><svg class="i"><use href="#i-mail"/></svg>Contactez-moi par e-mail <svg class="i"><use href="#i-arrow"/></svg></a>
-      </div>
+      <form class="cform" id="cform" action="https://formsubmit.co/aerion.climate1@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle demande depuis aerion-climate.fr">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://aerion-climate.fr/#contact-merci">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="row2">
+          <label><span class="lt">Nom <i>*</i></span><input type="text" name="Nom" required autocomplete="name"></label>
+          <label><span class="lt">Téléphone <i>*</i></span><input type="tel" name="Téléphone" required autocomplete="tel" pattern="[0-9 +.()-]{10,}"></label>
+        </div>
+        <div class="row2">
+          <label><span class="lt">E-mail</span><input type="email" name="email" autocomplete="email"></label>
+          <label><span class="lt">Commune <i>*</i></span><input type="text" name="Commune" required autocomplete="address-level2"></label>
+        </div>
+        <label><span class="lt">Votre demande</span>
+          <select name="Type de demande">
+            <option>Installation complète (fourniture et pose)</option>
+            <option>Mise en service d’un appareil déjà acheté</option>
+            <option>Autre question</option>
+          </select>
+        </label>
+        <label><span class="lt">Message <i>*</i></span><textarea name="Message" rows="5" required placeholder="Ex. : maison de 90 m², je souhaite climatiser le séjour et deux chambres."></textarea></label>
+        <p class="legal">Vos coordonnées servent uniquement à répondre à votre demande. <a href="mentions-legales.html#donnees">En savoir plus</a></p>
+        <button class="btn" type="submit"><svg class="i"><use href="#i-mail"/></svg><span>Envoyer ma demande</span></button>
+        <p class="cform-msg" id="cform-msg" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
+<script>
+(function(){
+  var f=document.getElementById('cform'),m=document.getElementById('cform-msg');
+  if(location.hash==='#contact-merci'){m.textContent='Merci, votre demande est bien envoyée. Je vous recontacte rapidement.';m.className='cform-msg ok';}
+  if(!f||!window.fetch)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=f.querySelector('button');b.disabled=true;m.className='cform-msg';m.textContent='Envoi en cours…';
+    fetch('https://formsubmit.co/ajax/aerion.climate1@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+      .then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)==='false')throw 0;});})
+      .then(function(){f.reset();m.className='cform-msg ok';m.textContent='Merci, votre demande est bien envoyée. Je vous recontacte rapidement.';})
+      .catch(function(){m.className='cform-msg err';m.innerHTML='L’envoi n’a pas fonctionné. Appelez-moi au <a href="tel:+33665362946">06 65 36 29 46</a> ou écrivez à <a href="mailto:aerion.climate1@gmail.com">aerion.climate1@gmail.com</a>.';})
+      .then(function(){b.disabled=false;});
+  });
+})();
+</script>
 </main>
 
 <footer>
