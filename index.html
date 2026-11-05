@@ -329,15 +329,21 @@
   var f=document.getElementById('cform'),m=document.getElementById('cform-msg');
   if(location.hash==='#contact-merci'){m.textContent='Merci, votre demande est bien envoyée. Je vous recontacte rapidement.';m.className='cform-msg ok';}
   if(!f||!window.fetch)return;
-  f.addEventListener('submit',function(e){
+  var h=function(e){
     e.preventDefault();
     var b=f.querySelector('button');b.disabled=true;m.className='cform-msg';m.textContent='Envoi en cours…';
+    var fb=function(){f.removeEventListener('submit',h);HTMLFormElement.prototype.submit.call(f);};
     fetch('https://formsubmit.co/ajax/aerion.climate1@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
-      .then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)==='false')throw 0;});})
-      .then(function(){f.reset();m.className='cform-msg ok';m.textContent='Merci, votre demande est bien envoyée. Je vous recontacte rapidement.';})
-      .catch(function(){m.className='cform-msg err';m.innerHTML='L’envoi n’a pas fonctionné. Appelez-moi au <a href="tel:+33665362946">06 65 36 29 46</a> ou écrivez à <a href="mailto:aerion.climate1@gmail.com">aerion.climate1@gmail.com</a>.';})
-      .then(function(){b.disabled=false;});
-  });
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(String(d.success)==='true'){f.reset();m.className='cform-msg ok';m.textContent='Merci, votre demande est bien envoyée. Je vous recontacte rapidement.';b.disabled=false;return;}
+        var t=String(d.message||'');
+        if(/activ/i.test(t)){m.className='cform-msg err';m.textContent='Formulaire en attente d’activation : un e-mail d’activation a été envoyé à aerion.climate1@gmail.com.';b.disabled=false;return;}
+        fb();
+      })
+      .catch(fb);
+  };
+  f.addEventListener('submit',h);
 })();
 </script>
 </main>
