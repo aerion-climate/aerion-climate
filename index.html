@@ -296,12 +296,12 @@
           <a href="https://g.page/r/Cebr_j0eTWvHEBM" target="_blank" rel="noopener"><svg class="i big"><use href="#i-star"/></svg>Voir mes avis Google</a>
         </div>
       </div>
-      <form class="cform" id="cform" action="https://formsubmit.co/aerion.climate1@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Nouvelle demande depuis aerion-climate.fr">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://aerion-climate.fr/#contact-merci">
-        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <form class="cform" id="cform" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="d2a00103-8a53-4432-bd3b-b91725f0d2c9">
+        <input type="hidden" name="subject" value="Nouvelle demande depuis aerion-climate.fr">
+        <input type="hidden" name="from_name" value="Site Aerion Climate">
+        <input type="hidden" name="redirect" value="https://aerion-climate.fr/#contact-merci">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="row2">
           <label><span class="lt">Nom <i>*</i></span><input type="text" name="Nom" required autocomplete="name"></label>
           <label><span class="lt">Téléphone <i>*</i></span><input type="tel" name="Téléphone" required autocomplete="tel" pattern="[0-9 +.()-]{10,}"></label>
@@ -333,12 +333,10 @@
     e.preventDefault();
     var b=f.querySelector('button');b.disabled=true;m.className='cform-msg';m.textContent='Envoi en cours…';
     var fb=function(){f.removeEventListener('submit',h);HTMLFormElement.prototype.submit.call(f);};
-    fetch('https://formsubmit.co/ajax/aerion.climate1@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
       .then(function(r){return r.json();})
       .then(function(d){
         if(String(d.success)==='true'){f.reset();m.className='cform-msg ok';m.textContent='Merci, votre demande est bien envoyée. Je vous recontacte rapidement.';b.disabled=false;return;}
-        var t=String(d.message||'');
-        if(/activ/i.test(t)){m.className='cform-msg err';m.textContent='Formulaire en attente d’activation : un e-mail d’activation a été envoyé à aerion.climate1@gmail.com.';b.disabled=false;return;}
         fb();
       })
       .catch(fb);
