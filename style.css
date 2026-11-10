@@ -71,7 +71,7 @@ h2{font:700 clamp(1.6rem,3.2vw,2.1rem)/1.2 var(--head);margin:0 0 .9rem}
 footer a:hover{color:#fff}
 
 footer{background:#000;color:#8fa0b1;padding:1.6rem 0;font-size:.9rem}
-footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+footer .wrap{display:flex;justify-content:center;gap:.6rem 1.4rem;flex-wrap:wrap}
 
 @media(max-width:960px){
   .split{grid-template-columns:1fr}
