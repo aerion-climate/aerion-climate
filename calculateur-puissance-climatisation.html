@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculateur de puissance de climatisation | Aerion Climate</title>
+<meta name="description" content="Calculez gratuitement la puissance de climatisation ou de pompe à chaleur air-air adaptée à votre pièce : surface, hauteur, isolation, exposition. Estimation en kW.">
+<link rel="canonical" href="https://aerion-climate.fr/calculateur-puissance-climatisation.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aerion Climate">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Calculateur de puissance de climatisation | Aerion Climate">
+<meta property="og:description" content="Calculez gratuitement la puissance de climatisation ou de pompe à chaleur air-air adaptée à votre pièce : surface, hauteur, isolation, exposition. Estimation en kW.">
+<meta property="og:url" content="https://aerion-climate.fr/calculateur-puissance-climatisation.html">
+<meta property="og:image" content="https://aerion-climate.fr/hero.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calculateur de puissance de climatisation","url":"https://aerion-climate.fr/calculateur-puissance-climatisation.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Tous","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"provider":{"@type":"HVACBusiness","name":"Aerion Climate","url":"https://aerion-climate.fr/","telephone":"+33665362946"}}
+</script>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css?v=20261110b">
+<link rel="stylesheet" href="blog.css?v=20261101b">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol></svg>
+<header class="top">
+  <div class="wrap bar">
+    <a href="index.html" class="logo-link"><img src="logo.webp" alt="Aerion Climate" width="640" height="338"></a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#prestations">Prestations</a>
+      <a href="index.html#apropos">À propos</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <a class="pill" href="tel:+33665362946"><svg class="i"><use href="#i-phone"/></svg><span>06 65 36 29 46</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="blog-hero"><div class="wrap narrow">
+    <a class="back" href="index.html">← Accueil</a>
+    <p class="eyebrow light">Outil gratuit</p>
+    <h1>Calculateur de puissance de climatisation</h1>
+    <p class="sub">Quelle puissance pour climatiser ou chauffer votre pièce avec une clim réversible ? Renseignez quelques informations, l’estimation s’affiche aussitôt.</p>
+  </div></section>
+  <article class="post">
+    <form class="cform calc" id="calc" onsubmit="return false">
+      <div class="row2">
+        <label><span class="lt">Surface de la pièce (m²)</span><input type="number" id="c-surf" min="5" max="200" step="1" inputmode="numeric" placeholder="Ex. : 25"></label>
+        <label><span class="lt">Hauteur sous plafond</span>
+          <select id="c-haut"><option value="2.5">2,50 m (standard)</option><option value="2.7">2,70 m</option><option value="3">3,00 m</option><option value="3.5">3,50 m et plus (immeuble ancien)</option></select></label>
+      </div>
+      <div class="row2">
+        <label><span class="lt">Isolation du logement</span>
+          <select id="c-iso"><option value="r">Récente ou très bonne (après 2012)</option><option value="m" selected>Correcte (rénovée, double vitrage)</option><option value="a">Ancienne ou faible</option></select></label>
+        <label><span class="lt">Exposition de la pièce</span>
+          <select id="c-expo"><option value="0.9">Nord, peu de soleil</option><option value="1" selected>Est ou ouest</option><option value="1.15">Sud ou grandes baies vitrées</option></select></label>
+      </div>
+      <div class="row2">
+        <label><span class="lt">Situation</span>
+          <select id="c-toit"><option value="1">Étage intermédiaire ou rez-de-chaussée</option><option value="1.15">Sous toiture ou dernier étage</option></select></label>
+        <label><span class="lt">Utilisation</span>
+          <select id="c-usage"><option value="rev">Rafraîchir l’été et chauffer l’hiver</option><option value="froid">Rafraîchir uniquement</option></select></label>
+      </div>
+    </form>
+
+    <div class="calc-res" id="calc-res" aria-live="polite">
+      <p class="calc-vide">Indiquez la surface de la pièce pour voir l’estimation.</p>
+    </div>
+
+    <h2>Comment l’estimation est calculée</h2>
+    <p>Le calculateur part du volume de la pièce (surface × hauteur sous plafond), puis applique des coefficients selon l’isolation, l’exposition au soleil et la présence d’une toiture au-dessus. Pour le chauffage, il prend une température extérieure de référence d’environ −8 °C, proche des hivers de l’Allier et du Puy-de-Dôme, et une température intérieure de 19 °C.</p>
+    <p>La taille conseillée correspond au modèle courant immédiatement supérieur au besoin le plus élevé (froid ou chaud). Les fabricants proposent en général des unités murales de 2 à 7 kW environ.</p>
+
+    <h2>Une estimation, pas un dimensionnement</h2>
+    <ul>
+      <li><strong>Trop puissante</strong>, une clim s’arrête et redémarre sans cesse : plus de bruit, plus d’usure, moins de confort.</li>
+      <li><strong>Pas assez puissante</strong>, elle tourne à fond sans atteindre la température voulue, surtout par grand froid.</li>
+      <li>Les apports de chaleur (cuisine ouverte, ordinateurs, nombre de personnes), les pièces qui communiquent et l’emplacement de l’unité extérieure comptent aussi. Je les vérifie lors de la visite technique.</li>
+    </ul>
+    <p>Plusieurs pièces à équiper ? Faites le calcul pour chacune : une seule unité extérieure peut souvent alimenter plusieurs unités intérieures (multisplit).</p>
+
+    <div class="cta"><h2>Vous voulez un avis sur votre projet ?</h2><p>J’affine le calcul sur place et je vous remets un devis détaillé, fourniture et pose comprises.</p><a class="btn" id="calc-devis" href="index.html#contact">Demander un devis</a></div>
+  </article>
+</main>
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i);};
+  var CF={r:30,m:35,a:45}, G={r:0.65,m:1,a:1.5}, DT=27;
+  var TAILLES=[2,2.5,3.5,4.2,5,6,7.1];
+  var nf=function(x){return x.toLocaleString('fr-FR',{minimumFractionDigits:1,maximumFractionDigits:1});};
+  var resume='';
+  function calc(){
+    var s=parseFloat($('c-surf').value), h=parseFloat($('c-haut').value), iso=$('c-iso').value,
+        ex=parseFloat($('c-expo').value), t=parseFloat($('c-toit').value), rev=$('c-usage').value==='rev', r=$('calc-res');
+    if(!(s>=5&&s<=200)){r.innerHTML='<p class="calc-vide">Indiquez la surface de la pièce (entre 5 et 200 m²) pour voir l’estimation.</p>';resume='';return;}
+    var vol=s*h, froid=vol*CF[iso]*ex*t/1000, chaud=rev?vol*G[iso]*DT*(t>1?1.1:1)/1000:0, besoin=Math.max(froid,chaud);
+    var taille=null;for(var i=0;i<TAILLES.length;i++){if(TAILLES[i]>=besoin){taille=TAILLES[i];break;}}
+    var html='<div class="calc-grid"><div><span>Besoin en froid</span><strong>'+nf(froid)+' kW</strong></div>';
+    if(rev)html+='<div><span>Besoin en chauffage</span><strong>'+nf(chaud)+' kW</strong></div>';
+    html+='</div>';
+    if(taille){html+='<p class="calc-taille">Taille d’appareil conseillée : <strong>'+nf(taille)+' kW</strong></p>';}
+    else{html+='<p class="calc-taille">Besoin supérieur à 7 kW : <strong>plusieurs unités intérieures</strong> seront sans doute nécessaires. Une étude sur place s’impose.</p>';}
+    if(rev&&chaud>froid)html+='<p class="calc-note">Ici c’est le chauffage qui détermine la puissance. Par grand froid, une pompe à chaleur air-air perd une partie de sa puissance : je vérifie ce point lors de la visite.</p>';
+    html+='<p class="calc-note">Estimation indicative, à confirmer lors de la visite technique.</p>';
+    r.innerHTML=html;
+    resume='Calculateur : pièce de '+s+' m² ('+h.toString().replace('.',',')+' m sous plafond), '+$('c-iso').selectedOptions[0].text.toLowerCase()+', '+$('c-expo').selectedOptions[0].text.toLowerCase()+'. Estimation : '+nf(froid)+' kW en froid'+(rev?', '+nf(chaud)+' kW en chauffage':'')+(taille?', appareil conseillé '+nf(taille)+' kW.':'.');
+  }
+  ['c-surf','c-haut','c-iso','c-expo','c-toit','c-usage'].forEach(function(i){$(i).addEventListener('input',calc);$(i).addEventListener('change',calc);});
+  $('calc-devis').addEventListener('click',function(){try{if(resume)sessionStorage.setItem('aerion-calc',resume);}catch(e){}});
+  calc();
+})();
+</script>
+<footer>
+  <div class="wrap"><span>© 2026 Aerion Climate · 20 Rue Bargoin, 03200 Vichy</span><a href="climatisation-vichy.html">Climatisation à Vichy</a><a href="climatisation-clermont-ferrand.html">Clermont-Ferrand</a><a href="blog.html">Blog</a><a href="https://www.facebook.com/61596216126542" target="_blank" rel="noopener">Facebook</a><a href="mentions-legales.html">Mentions légales</a></div>
+</footer>
+</body>
+</html>

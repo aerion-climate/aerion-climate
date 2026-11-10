@@ -180,7 +180,7 @@
 </script>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css?v=20261110a">
+<link rel="stylesheet" href="style.css?v=20261110b">
 </head>
 <body>
 
@@ -236,6 +236,7 @@
         <h2>Installation et mise en service de climatisation</h2>
         <span class="rule"></span>
         <p class="muted">Je fournis et j’installe votre climatisation ou votre pompe à chaleur air-air de A à Z, ou j’assure la mise en service d’un appareil déjà acheté, dans le respect des normes en vigueur, pour un fonctionnement optimal et durable.</p>
+        <p class="calc-promo"><a class="btn" href="calculateur-puissance-climatisation.html">Calculer la puissance de ma clim</a></p>
       </div>
       <div class="cards">
         <article><svg class="i big"><use href="#i-home"/></svg><h3>Installation</h3><p>Fourniture et pose complète en maison ou appartement : climatisation simple ou réversible (pompe à chaleur air-air), du choix de l’appareil à la mise en route</p></article>
@@ -382,6 +383,7 @@
 (function(){
   var f=document.getElementById('cform'),m=document.getElementById('cform-msg');
   if(location.hash==='#contact-merci'){m.textContent='Merci, votre demande est bien envoyée. Je vous recontacte rapidement.';m.className='cform-msg ok';}
+  try{var c=sessionStorage.getItem('aerion-calc'),t=f&&f.querySelector('textarea');if(c&&t&&!t.value){t.value=c+'\n\n';sessionStorage.removeItem('aerion-calc');}}catch(e){}
   if(!f||!window.fetch)return;
   var h=function(e){
     e.preventDefault();
@@ -401,7 +403,7 @@
 </main>
 
 <footer>
-  <div class="wrap"><span>© 2026 Aerion Climate · 20 Rue Bargoin, 03200 Vichy</span><a href="climatisation-vichy.html">Climatisation à Vichy</a><a href="climatisation-clermont-ferrand.html">Clermont-Ferrand</a><a href="blog.html">Blog</a><a href="https://www.facebook.com/61596216126542" target="_blank" rel="noopener">Facebook</a><a href="mentions-legales.html">Mentions légales</a></div>
+  <div class="wrap"><span>© 2026 Aerion Climate · 20 Rue Bargoin, 03200 Vichy</span><a href="calculateur-puissance-climatisation.html">Calculateur de puissance</a><a href="climatisation-vichy.html">Climatisation à Vichy</a><a href="climatisation-clermont-ferrand.html">Clermont-Ferrand</a><a href="blog.html">Blog</a><a href="https://www.facebook.com/61596216126542" target="_blank" rel="noopener">Facebook</a><a href="mentions-legales.html">Mentions légales</a></div>
 </footer>
 
 </body>
