@@ -142,12 +142,17 @@ footer .wrap{display:flex;justify-content:center;gap:.6rem 1.4rem;flex-wrap:wrap
 .avis-links{margin:1rem 0 0;font-size:.92rem;color:#c3d0dd}
 .avis-links a{color:#fff;text-decoration:underline}
 
-/* Marques */
-.marques{background:#fff}
-.logos{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,200px));gap:1rem}
-.logos li{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:12px;height:110px;padding:1rem}
-.logos img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
-.logos.small{grid-template-columns:repeat(3,minmax(0,150px));gap:.8rem;margin-top:.8rem}
-.logos.small li{height:72px;padding:.7rem}
-.fourn-titre{margin:2.2rem 0 0;color:var(--mute);font:600 .9rem var(--head)}
-@media(max-width:640px){.logos{grid-template-columns:repeat(3,1fr);gap:.6rem}.logos li{height:80px;padding:.6rem}.logos.small li{height:56px;padding:.5rem}}
+/* Marques : bandeau défilant */
+.marques{background:#fff;overflow:hidden}
+.ticker{margin-top:2rem;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ticker-track{display:flex;width:max-content;animation:defile 30s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-list{list-style:none;display:flex;align-items:center;gap:4rem;margin:0;padding:0 2rem 0 2rem}
+.ticker-list li{flex:none;position:relative;display:flex;align-items:center;height:70px}
+.ticker-list img{height:56px;width:auto;max-width:200px;object-fit:contain;transition:opacity .3s}
+.ticker-list .coul{position:absolute;left:0;top:50%;transform:translateY(-50%);opacity:0}
+.ticker-list li:hover .coul,.ticker-list li:active .coul{opacity:1}
+.ticker-list li:hover .nb,.ticker-list li:active .nb{opacity:0}
+@keyframes defile{to{transform:translateX(-50%)}}
+@media(max-width:640px){.ticker-list{gap:2.5rem;padding:0 1.25rem}.ticker-list img{height:42px;max-width:150px}.ticker-track{animation-duration:22s}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none;width:auto;flex-wrap:wrap}.ticker-list[aria-hidden]{display:none}.ticker{-webkit-mask-image:none;mask-image:none}.ticker-list{flex-wrap:wrap;justify-content:center;gap:2rem}}
