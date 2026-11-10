@@ -165,3 +165,22 @@ footer .wrap{display:flex;justify-content:center;gap:.6rem 1.4rem;flex-wrap:wrap
 .calc-res .calc-taille strong{color:var(--sky)}
 .post .calc-res .calc-note{font-size:.88rem}
 .calc-promo{margin-top:1.4rem}
+
+/* Guides : dépannage et démarches */
+.post .alerte{background:#fff6e5;border:1px solid #f5c26b;border-radius:12px;padding:1rem 1.2rem;margin:1.5rem 0;color:#4a3410;font-size:.98rem}
+.guide{display:grid;gap:.8rem;margin:1.5rem 0}
+.guide details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.3rem}
+.guide summary{cursor:pointer;font:700 1.05rem/1.35 var(--head);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.guide summary::-webkit-details-marker{display:none}
+.guide summary::after{content:"+";color:var(--blue);font-size:1.4rem;line-height:1}
+.guide details[open] summary::after{content:"–"}
+.guide details p{margin:.8rem 0 0;font-size:1rem}
+.post ul.check{list-style:none;padding-left:0}
+.post ul.check li{padding-left:1.8rem;position:relative}
+.post ul.check li::before{content:"☐";position:absolute;left:0;color:var(--blue);font-size:1.1rem;line-height:1.4}
+.modele{margin:1.2rem 0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.modele-tete{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;background:var(--card);padding:.8rem 1.1rem;border-bottom:1px solid var(--line);font-family:var(--head)}
+.copier{border:0;background:var(--blue);color:#fff;font:600 .88rem var(--head);padding:.5rem 1rem;border-radius:99px;cursor:pointer}
+.modele pre{margin:0;padding:1.1rem;white-space:pre-wrap;font:400 .92rem/1.55 var(--body);color:#2a3644;max-height:340px;overflow:auto}
+.liens-guides{margin-top:1.4rem;color:var(--mute)}
+.liens-guides a{color:var(--blue);text-decoration:underline}
