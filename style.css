@@ -26,6 +26,8 @@ nav a:hover,nav a.on{color:var(--sky);border-color:var(--sky)}
 .hero .wrap{position:relative;z-index:2}
 .eyebrow{font:600 .8rem var(--head);letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin:0 0 .8rem}
 .eyebrow.light{color:#fff}
+.hero-title{margin:0;font-size:inherit;font-weight:inherit}
+.hero-title .brand,.hero-title .tagline{display:block}
 .brand{margin:0 0 1rem;font:800 clamp(2.8rem,8vw,5rem)/1 var(--head)}
 .brand span{display:block}
 .brand em{display:block;font-style:normal;color:var(--blue);letter-spacing:.32em;font-size:.82em;margin-top:.1em}
