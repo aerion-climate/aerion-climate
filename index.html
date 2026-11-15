@@ -237,6 +237,21 @@
     </div>
   </section>
 
+  <section class="noel" id="noel">
+    <div class="wrap noel-in">
+      <div class="noel-vid">
+        <video id="noel-video" src="noel.mp4" poster="noel-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vidéo de vœux de Noël d’Aerion Climate"></video>
+        <button type="button" class="noel-son" id="noel-son" aria-pressed="false">🔇 Activer le son</button>
+      </div>
+      <div class="noel-txt">
+        <p class="eyebrow">Joyeuses fêtes</p>
+        <h2>Joyeux Noël et belle année 2027&nbsp;!</h2>
+        <span class="rule"></span>
+        <p class="muted">Je vous souhaite de très belles fêtes de fin d’année, bien au chaud, et une excellente année 2027.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="prest" id="prestations">
     <div class="wrap split">
       <div>
@@ -416,5 +431,10 @@
   <div class="wrap"><span>© 2026 Aerion Climate · 20 Rue Bargoin, 03200 Vichy</span><a href="calculateur-puissance-climatisation.html">Calculateur de puissance</a><a href="depannage-climatisation.html">Dépannage</a><a href="demarches-avant-installation-climatisation.html">Démarches avant travaux</a><a href="climatisation-vichy.html">Climatisation à Vichy</a><a href="climatisation-clermont-ferrand.html">Clermont-Ferrand</a><a href="blog.html">Blog</a><a href="https://www.facebook.com/61596216126542" target="_blank" rel="noopener">Facebook</a><a href="mentions-legales.html">Mentions légales</a></div>
 </footer>
 
+<script>
+(function(){var v=document.getElementById("noel-video"),b=document.getElementById("noel-son");if(!v||!b)return;
+b.addEventListener("click",function(){v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play();}
+b.textContent=v.muted?"🔇 Activer le son":"🔊 Couper le son";b.setAttribute("aria-pressed",String(!v.muted));});})();
+</script>
 </body>
 </html>
