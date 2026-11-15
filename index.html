@@ -241,7 +241,7 @@
     <div class="wrap noel-in">
       <div class="noel-vid">
         <video id="noel-video" src="noel.mp4" poster="noel-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vidéo de vœux de Noël d’Aerion Climate"></video>
-        <button type="button" class="noel-son" id="noel-son" aria-pressed="false">🔇 Activer le son</button>
+        <button type="button" class="noel-son" id="noel-son" aria-pressed="false" aria-label="Activer ou couper le son">🔇 Son</button>
       </div>
       <div class="noel-txt">
         <p class="eyebrow">Joyeuses fêtes</p>
@@ -434,7 +434,7 @@
 <script>
 (function(){var v=document.getElementById("noel-video"),b=document.getElementById("noel-son");if(!v||!b)return;
 b.addEventListener("click",function(){v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play();}
-b.textContent=v.muted?"🔇 Activer le son":"🔊 Couper le son";b.setAttribute("aria-pressed",String(!v.muted));});})();
+b.textContent=v.muted?"🔇 Son":"🔊 Son";b.setAttribute("aria-pressed",String(!v.muted));});})();
 </script>
 </body>
 </html>
