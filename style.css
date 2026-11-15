@@ -196,4 +196,4 @@ footer .wrap{display:flex;justify-content:center;gap:.6rem 1.4rem;flex-wrap:wrap
 .noel .eyebrow{color:#ffd77a}
 .noel .rule{background:#ffd77a}
 .noel .muted{color:#d6e0f0}
-@media(max-width:760px){.noel-in{grid-template-columns:1fr;gap:1.6rem;justify-items:center;text-align:center}.noel .rule{margin-left:auto;margin-right:auto}.noel .muted{margin:0 auto}}
+@media(max-width:760px){.noel{padding:2.2rem 0}.noel-vid{width:min(190px,52vw);border-radius:14px}.noel-son{font-size:.7rem;padding:.35rem .6rem;top:.45rem;right:.45rem}.noel-in{grid-template-columns:1fr;gap:1.2rem;justify-items:center;text-align:center}.noel .rule{margin-left:auto;margin-right:auto}.noel .muted{margin:0 auto}}
