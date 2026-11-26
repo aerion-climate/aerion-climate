@@ -197,3 +197,10 @@ footer .wrap{display:flex;justify-content:center;gap:.6rem 1.4rem;flex-wrap:wrap
 .noel .rule{background:#ffd77a}
 .noel .muted{color:#d6e0f0}
 @media(max-width:760px){.noel{padding:2.2rem 0}.noel-vid{width:min(240px,64vw);border-radius:14px}.noel-son{font-size:.7rem;padding:.35rem .6rem;top:.45rem;right:.45rem}.noel-in{grid-template-columns:1fr;gap:1.2rem;justify-items:center;text-align:center}.noel .rule{margin-left:auto;margin-right:auto}.noel .muted{margin:0 auto}}
+.btn.alt{background:transparent;border:2px solid currentColor;color:inherit}
+.btn.alt:hover{background:rgba(255,255,255,.12)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.call-line{margin:1.4rem 0}
+.post .call-line a.btn{color:#fff;text-decoration:none}
+.post .cta a.btn{margin:.3rem .4rem .3rem 0}
+footer .zone-links{margin-top:.7rem;font-size:.85rem}
